@@ -1,0 +1,16 @@
+{
+  "name": "ui-facade",
+  "version": "1.0.0",
+  "description": "Backend for UI",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/nanovazquez/ms-meetup-async-workshop",
+    "type": "git"
+  },
+  "author": "nanovazquez",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.1",
+    "request": "^2.79.0"
+  }
+}
