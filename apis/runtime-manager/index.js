@@ -16,7 +16,7 @@ app.get('/applications', function (req, res) {
       return console.error(err);
     }
     var apps = JSON.parse(data);
-    console.log('Requesting applications, sending %s apps', apps.length);
+    console.log('..applications requested, sending %s apps', apps.length);
     res.send(apps);
   });
 });
