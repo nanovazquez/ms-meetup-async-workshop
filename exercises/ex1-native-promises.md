@@ -4,7 +4,7 @@
 
 1. Create a new Promise instance by updating the function inside the `app.get('/applications')` with the following code:
 
-  ```JS
+  ```js
   app.get('/applications', function (req, res) {
     var promise = new Promise(function (resolve, reject) {
       // TODO: Add the action here
@@ -22,7 +22,7 @@
 
 1. Next, update the body of the function used when creating the Promise to perform the read action. Notice that we will call the `resolve()` and `reject()` functions when appropiate with the proper data:
 
-  ```JS
+  ```js
   app.get('/applications', function (req, res) {
     var promise = new Promise(function (resolve, reject) {
       fs.readFile('data.json', 'utf8', function (err, data) {
@@ -36,9 +36,9 @@
   });
   ```
 
-1. Now, set up the code that will be executed when the Promise is resolved with a successful result.
+1. Now, set up the code that will be executed when the Promise is resolved with a successful result:
 
-  ```JS
+  ```js
   app.get('/applications', function (req, res) {
     ...
 
@@ -54,9 +54,9 @@
   });
   ```
 
-1. Finally, handle the failure scenario by adding some code inside the `catch()`.
+1. Finally, handle the failure scenario by adding some code inside the `catch()`:
 
-  ```JS
+  ```js
   app.get('/applications', function (req, res) {
     ...
 
@@ -70,7 +70,7 @@
   });
   ```
 
-1. We are all set! Run the following code to activate the backend:
+1. We are all set! 😊 Run the following code to activate the backend:
 
   ```js
   node start-backend.js

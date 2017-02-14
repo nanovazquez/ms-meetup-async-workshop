@@ -45,7 +45,7 @@ Since async/await is still in revision, we need to perform some actions to set u
 
 1. Now, update the function being called when the user requests the `/applications` endpoint by prefixing it with the `async` keyword:
 
-  ```JS
+  ```js
   app.get('/applications', async function (req, res) {
     // TODO: Perform the operation
   });
@@ -53,7 +53,7 @@ Since async/await is still in revision, we need to perform some actions to set u
 
 1. Then, update the body of `app.get('/applications/)` with the following code:
 
-  ```JS
+  ```js
   app.get('/applications', async function (req, res) {
     try {
      // TODO: Get the data
@@ -66,7 +66,7 @@ Since async/await is still in revision, we need to perform some actions to set u
 
 1. Next, set up the code that will be executed to retrieve the data, parse it, and send it to the user. For this, paste the following code inside the `try` statement.
 
-  ```JS
+  ```js
   app.get('/applications', async function (req, res) {
     try {
       var data = await readFile('data.json', 'utf8');
@@ -82,7 +82,7 @@ Since async/await is still in revision, we need to perform some actions to set u
 
 1. Finally, handle the failure scenario by adding some code inside the `catch` statement.
 
-  ```JS
+  ```js
   app.get('/applications', async function (req, res) {
     try {
       var data = await readFile('data.json', 'utf8');
@@ -95,7 +95,7 @@ Since async/await is still in revision, we need to perform some actions to set u
   });
   ```
 
-1. We are all set! Run the following code to activate the backend:
+1. We are all set! 😊 Run the following code to activate the backend:
 
   ```js
   node start-backend.js

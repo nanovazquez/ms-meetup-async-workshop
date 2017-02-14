@@ -4,7 +4,7 @@
 
 **Install node modules**
 
-```JS
+```js
 node install.js
 ```
 
@@ -12,13 +12,13 @@ node install.js
 
 1. Open a terminal and run:
 
-  ```JS
+  ```js
   node start-backend.js
   ```
 
 2. Open another terminal and run:
 
-  ```JS
+  ```js
   cd ui-facade && yarn start
   ```
 
