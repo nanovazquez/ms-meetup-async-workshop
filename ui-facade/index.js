@@ -16,6 +16,8 @@ app.use(function (req, res, next) {
   next();
 });
 
+// DISCLAIMER: The following code is really horrible and was made in purpose for to make a point
+// Do not try this at home, outside your home and especially while creating apps
 app.get('/applications', function (req, res) {
   var applications = [];
   console.log();
