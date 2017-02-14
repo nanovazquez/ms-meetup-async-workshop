@@ -54,7 +54,9 @@
   }
   ```
 
-1. We are all set! 😊 Run the following code to activate the backend:
+### Run the code
+
+1. We are all set 😊 Run the following code to activate the backend:
 
   ```js
   node start-backend.js
@@ -63,7 +65,7 @@
   And the following code for the frontend:
 
   ```js
-  cd ui-facade && yarn start
+  cd mulesoft-apps-ui && npm start
   ```
 
   You should see the list with all the apps loaded.

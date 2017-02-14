@@ -13,11 +13,10 @@ class ApplicationsList extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
   }
 
-  handleSearch(event, newValue) {
-    const filteredApps = newValue.length ?
-      this.state.applications.filter(app => app.name.indexOf(newValue) !== -1) :
-      null;
-
+  handleSearch(event, searchValue) {
+    const filteredApps = searchValue.length
+      ? this.state.applications.filter(app => app.name.indexOf(searchValue) !== -1)
+      : null;
     this.setState({ filteredApps: filteredApps })
   }
 

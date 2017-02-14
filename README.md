@@ -19,7 +19,7 @@ node install.js
 2. Open another terminal and run:
 
   ```js
-  cd ui-facade && yarn start
+  cd mulesoft-apps-ui && npm start
   ```
 
 ### Exercises
@@ -27,6 +27,6 @@ node install.js
 This workshop contains the following exercises:
 
 1. [Exercise 1: Native Promises](./exercises/ex1-native-promises.md)
-1. [Exercise 2: Bluebird](./exercises/ex2-native-promises.md)
+1. [Exercise 2: Bluebird](./exercises/ex2-bluebird.md)
 1. [Exercise 3: async/await](./exercises/ex3-async-await.md)
 1. [Exercise 4: RxJs](./exercises/ex4-rxjs.md)

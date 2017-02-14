@@ -8,7 +8,7 @@ Since async/await is still in revision, we need to perform some actions to set u
 
 1. Update the **package.json** with the following code:
 
-  ```json
+  ```
   {
     ...
     "babel": {
@@ -22,7 +22,7 @@ Since async/await is still in revision, we need to perform some actions to set u
 
 1. Update the start script with the following code:
 
-  ```json
+  ```
   {
     ...
     "scripts": {
@@ -95,7 +95,9 @@ Since async/await is still in revision, we need to perform some actions to set u
   });
   ```
 
-1. We are all set! 😊 Run the following code to activate the backend:
+### Run the code
+
+1. We are all set 😊 Run the following code to activate the backend:
 
   ```js
   node start-backend.js
@@ -104,7 +106,7 @@ Since async/await is still in revision, we need to perform some actions to set u
   And the following code for the frontend:
 
   ```js
-  cd ui-facade && yarn start
+  cd mulesoft-apps-ui && npm start
   ```
 
   You should see the list with all the apps loaded.

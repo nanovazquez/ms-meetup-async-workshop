@@ -25,6 +25,7 @@ class ApplicationsList extends React.Component {
       .interval(3000)
       .startWith(0)
       .flatMap(() => Rx.Observable.fromPromise(applicationsService.getApplications()))
+      .retry(3)
       .filter(apps => apps.filter(app => !app.name.length))
       .subscribe(result => this.setState({ applications: result }));
   }

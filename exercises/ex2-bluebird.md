@@ -10,11 +10,11 @@
 
 1. Let's start by using one of the best features of Bluebird: `promisify`. This function returns a _promisified_ function that will wrap the one sent by argument, which should conform to node.js convention of handling callbacks. In this case, we are going to promisify the `fs.readFle` (for more information, see [here](http://bluebirdjs.com/docs/api/promise.promisify.html)):
 
-```js
-var readFile = Promise.promisify(fs.readFile);
-```
+  ```js
+  var readFile = Promise.promisify(fs.readFile);
+  ```
 
-> **Note:** you can also promisify the entire object by using `promisifyAll`. For more info, see [here](http://bluebirdjs.com/docs/api/promise.promisifyall.html).
+  > **Note:** you can also promisify the entire object by using `promisifyAll`. For more info, see [here](http://bluebirdjs.com/docs/api/promise.promisifyall.html).
 
 1. Now, instead of creating a new Promise instance (which is considered a bad practice by Bluebird) call the _promisified_ version of `readFile` that you just created. Paste the following code inside `app.get('/applications/)`:
 
@@ -62,7 +62,9 @@ var readFile = Promise.promisify(fs.readFile);
   });
   ```
 
-1. We are all set! 😊 Run the following code to activate the backend:
+### Run the code
+
+1. We are all set 😊 Run the following code to activate the backend:
 
   ```js
   node start-backend.js
@@ -71,7 +73,7 @@ var readFile = Promise.promisify(fs.readFile);
   And the following code for the frontend:
 
   ```js
-  cd ui-facade && yarn start
+  cd mulesoft-apps-ui && npm start
   ```
 
   You should see the list with all the apps loaded.
