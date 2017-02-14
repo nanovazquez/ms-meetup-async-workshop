@@ -2,9 +2,9 @@ var exec = require('child_process').exec;
 
 var scripts = [
   'cd ui-facade && npm start --silent',
-  'cd apis/end/azure-manager && npm start --silent',
-  'cd apis/end/runtime-manager && npm start --silent',
-  'cd apis/end/worker-clouds && npm start --silent',
+  'cd apis/begin/azure-manager && npm start --silent',
+  'cd apis/begin/runtime-manager && npm start --silent',
+  'cd apis/begin/worker-clouds && npm start --silent',
 ];
 
 process.stdout.write('\033c');
