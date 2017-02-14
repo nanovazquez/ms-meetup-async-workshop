@@ -1,7 +1,7 @@
 {
-  "name": "azure-manager",
+  "name": "ui-facade",
   "version": "1.0.0",
-  "description": "Mule Azure Manager API",
+  "description": "Mule Runtime Manager API",
   "main": "index.js",
   "repository": {
     "url": "https://github.com/nanovazquez/ms-meetup-async-workshop",
@@ -10,7 +10,7 @@
   "author": "nanovazquez",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.1",
-    "request": "^2.79.0"
+    "bluebird": "^3.4.7",
+    "express": "^4.14.1"
   }
 }

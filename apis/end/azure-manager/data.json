@@ -1,0 +1,16 @@
+[
+  {
+    "id": 5,
+    "name": "application5",
+    "target": "AZURE",
+    "status": "STARTED",
+    "file": "app.zip"
+  },
+  {
+    "id": 6,
+    "name": "application6",
+    "target": "AZURE",
+    "status": "STARTED",
+    "file": "app.zip"
+  }
+]

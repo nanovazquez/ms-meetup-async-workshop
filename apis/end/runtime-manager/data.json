@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "application1",
+    "target": "SERVER",
+    "status": "STARTED",
+    "file": "app.zip"
+  },
+  {
+    "id": 2,
+    "name": "application2",
+    "target": "SERVER_GROUP",
+    "status": "STARTED",
+    "file": "app.zip"
+  },
+  {
+    "id": 3,
+    "name": "application3",
+    "target": "CLUSTER",
+    "status": "STARTED",
+    "file": "app.zip"
+  }
+]

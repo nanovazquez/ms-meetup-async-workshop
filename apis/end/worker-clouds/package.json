@@ -1,0 +1,16 @@
+{
+  "name": "ui-facade",
+  "version": "1.0.0",
+  "description": "Mule Worker Clouds API",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/nanovazquez/ms-meetup-async-workshop",
+    "type": "git"
+  },
+  "author": "nanovazquez",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "express": "^4.14.1"
+  }
+}

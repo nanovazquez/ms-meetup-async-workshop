@@ -1,7 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var app = express();
-var port = process.env.PORT || 8102;
+var port = process.env.PORT || 8103;
 
 // Add headers
 app.use(function (req, res, next) {
@@ -13,7 +13,7 @@ app.use(function (req, res, next) {
 app.get('/applications', function (req, res) {
   fs.readFile('data.json', 'utf8', function (err, data) {
     if (err) {
-      return console.error(err);
+      throw err;
     }
     var apps = JSON.parse(data);
     console.log('..applications requested, sending %s apps', apps.length);
@@ -22,5 +22,5 @@ app.get('/applications', function (req, res) {
 });
 
 app.listen(port, function () {
-  console.info('Azure Manager API started on port', port);
+  console.info('Runtime Manager API started on port', port);
 });

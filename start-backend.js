@@ -1,9 +1,9 @@
 var exec = require('child_process').exec;
 
 var scripts = [
-  'cd apis/azure-manager && node .',
-  'cd apis/runtime-manager && node .',
-  'cd apis/worker-clouds && node .',
+  'cd apis/end/azure-manager && node .',
+  'cd apis/end/runtime-manager && node .',
+  'cd apis/end/worker-clouds && node .',
   'cd ui-facade && node .',
 ];
 

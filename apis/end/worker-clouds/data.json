@@ -1,0 +1,9 @@
+[
+  {
+    "id": 4,
+    "name": "application4",
+    "target": "CLOUDHUB",
+    "status": "STARTED",
+    "file": "app.zip"
+  }
+]
