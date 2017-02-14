@@ -16,7 +16,7 @@ var readFile = Promise.promisify(fs.readFile);
 
 > **Note:** you can also promisify the entire object by using `promisifyAll`. For more info, see [here](http://bluebirdjs.com/docs/api/promise.promisifyall.html).
 
-1. Now, instead of creating a new Promise instance (which is considered a bad practice by Bluebird) call the _promisified_ version of `readFile` that you just created. Paste the following code inside `app.get('/applications/`:
+1. Now, instead of creating a new Promise instance (which is considered a bad practice by Bluebird) call the _promisified_ version of `readFile` that you just created. Paste the following code inside `app.get('/applications/)`:
 
   ```JS
   app.get('/applications', function (req, res) {
@@ -62,10 +62,7 @@ var readFile = Promise.promisify(fs.readFile);
   });
   ```
 
-1. Congratz! We have everything in place.
-
-
-  Run the following code to activate the backend:
+1. We are all set! Run the following code to activate the backend:
 
   ```js
   node start-backend.js

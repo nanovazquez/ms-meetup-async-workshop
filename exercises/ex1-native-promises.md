@@ -70,10 +70,7 @@
   });
   ```
 
-1. Congratz! We have everything in place.
-
-
-  Run the following code to activate the backend:
+1. We are all set! Run the following code to activate the backend:
 
   ```js
   node start-backend.js
