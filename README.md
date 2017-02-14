@@ -22,18 +22,11 @@ node install.js
   cd ui-facade && yarn start
   ```
 
-### Exercise 1: Native Promises
+### Exercises
 
-TBC
+This workshop contains the following exercises:
 
-### Exercise 2: Bluebird
-
-TBC
-
-### Exercise 3: RxJs
-
-TBC
-
-### Exercise 4: async/await
-
-TBC
+1. [Exercise 1: Native Promises](./exercises/ex1-native-promises.md)
+1. [Exercise 2: Bluebird](./exercises/ex2-native-promises.md)
+1. [Exercise 3: async/await](./exercises/ex3-async-await.md)
+1. [Exercise 4: RxJs](./exercises/ex4-rxjs.md)
