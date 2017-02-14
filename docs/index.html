@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>MuleSoft Meetup 2017 Workshop - Async techniques with JS</title>
+  
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css" id="theme">
+  
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  
+  <!-- Reveal scripts -->
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+  
+  <!-- favicon -->
+  <link rel="shortcut icon" href="https://cdn-qa.anypoint.mulesoft.com/core/v1/icons/favicon.ico">
+</head>
+
+<body>
+  
+  <div class="reveal">
+    
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <section>
+        <div style="display: flex">
+          <h1 class="ms-title">MuleSoft Meetup 2017 Workshop</h1>
+          <div class="ms-logo"></div>
+        </div>
+        <h3>Async techniques with JS</h3>
+        <p><a href="http://twitter.com/nanovazquez">@nanovazquez87</a></p>
+      </section>
+      
+      <section id="scenario">
+        <h2>Scenario</h2>
+        <p>Display applications from different sources</p>
+        <div class="flex-row centered">
+          <img class="fragment clean scenario-image" src="./css/images/website.png" />
+          <img class="fragment clean scenario-image-small" src="./css/images/arrow.png" />
+          <img class="fragment clean scenario-image" src="./css/images/api-facade.png" />
+          <div class="flex-column">
+            <div class="flex-row">
+              <img class="fragment clean scenario-image-small" src="./css/images/arrow.png" />
+              <img class="fragment clean scenario-image-small" src="./css/images/api.png" />
+            </div>
+            <div class="flex-row">
+              <img class="fragment clean scenario-image-small" src="./css/images/arrow.png" />
+              <img class="fragment clean scenario-image-small" src="./css/images/api.png" />
+            </div>
+            <div class="flex-row">
+              <img class="fragment clean scenario-image-small" src="./css/images/arrow.png" />
+              <img class="fragment clean scenario-image-small" src="./css/images/api.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="exercise-1">
+        <section data-markdown>
+          <script type="text/template">
+            ## Exercise 1: Native Promises
+            
+            * Simplifies writing asynchronous code using a defined open standard [Promises/A+](https://github.com/promises-aplus/promises-spec)
+            * They represent a value that will be resolved at some point in the future
+            * Fully supported in Node v6 and Edge, Chrome and FF latest versions
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Hello World example
+            
+            ```js
+            var promise = new Promise(function(resolve, reject) {
+              // Run asynchronous task
+
+              if(/* good condition */) {
+                resolve('Success!');
+              }
+              else {
+                reject('Failure!');
+              }
+            });
+
+            promise.then(function() { 
+              // TODO: handle sucess
+            }).catch(function(err) {
+              // TODO: handle error
+            });
+            ```
+          </script>
+        </section>
+      </section>
+
+      <section id="exercise-2">
+        <section data-markdown>
+          <script type="text/template">
+            ## Exercise 2: Bluebird
+            
+            * Battle-tested, full-featured and very optimized Promises library
+            * More performant than native promises (for now)
+            * Ability to promisify callback functions
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Hello World example
+            
+            ```js
+            var Promise = require('bluebird');
+            var request = Promise.promisify(require("request"));
+            
+            request("foo.bar")
+              .then(function() { 
+                // TODO: handle sucess
+              }).catch(function(err) {
+                // TODO: handle error
+              })
+            ;
+            ```
+          </script>
+        </section>
+      </section>
+
+      <section id="exercise-3">
+        <section data-markdown>
+          <script type="text/template">
+            ## Exercise 3: async/await
+            
+            * Simple pattern that eases the handing of async calls
+            * Still not part of the spec, proposal for the next version (ES7)
+            * Used in other languages (C#, Python, TS/Dart)
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Hello World example
+            
+            ```js
+            async function main() {
+              try {
+                
+                var result = await asyncOperation();
+                // TODO: handle sucess
+                
+              } catch(err) {
+                // TODO: handle error
+              }
+            }
+            ```
+          </script>
+        </section>
+      </section>
+      
+      <section id="exercise-4">
+        <section data-markdown>
+          <script type="text/template">
+            ## Exercise 4: RxJs
+            
+            * Reactive Extensions Library for JavaScript
+            * Useful for composing asynchronous and event-based programs with fluent query operators
+            * Everything is mapped to Observables. Then, apply several operators to them in a fluent way
+          </script>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+            ## Hello World example
+            
+            ```js
+            const set = new Set([1, 2, 3]);
+            Rx.Observable.from(set)
+              .map(x => x * 2)
+              .subscribe(
+                x => console.log(x),
+                error => console.error(error),
+                () => console.log('done'));
+                        
+            // Result is: 2 4 6 done
+            ```
+          </script>
+        </section>
+      </section>
+        
+      </div>
+      
+    </div>
+    
+    <script>
+    
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+    
+    </script>
+    
+  </body>
+  </html>

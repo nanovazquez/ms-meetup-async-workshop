@@ -1,0 +1,53 @@
+.ms-title {
+  width: 400px;
+  flex: 2;
+}
+
+.ms-logo {
+  background: url('./images/mulesoft-icon.png') no-repeat;
+  width: 350px;
+  height: 350px;
+  flex: 1;
+  background-position: center center;
+  align-items: center;
+  justify-content: center;
+}
+
+.clean,
+.reveal section img.clean {
+  margin: 0;
+  border: 0;
+  outline: 0
+  padding: 0;
+  box-shadow: none;
+  background: none;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.scenario-image {
+  width: 250px;
+  height: 250px;
+}
+
+.scenario-image-small {
+  width: 150px;
+  height: 150px;
+}
+
+.reveal pre code {
+  line-height: 100%;
+}
