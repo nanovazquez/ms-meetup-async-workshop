@@ -10,6 +10,15 @@ class ApplicationsList extends React.Component {
   constructor() {
     super();
     this.state = { applications: [] };
+    this.handleSearch = this.handleSearch.bind(this);
+  }
+
+  handleSearch(event, newValue) {
+    const filteredApps = newValue.length ?
+      this.state.applications.filter(app => app.name.indexOf(newValue) !== -1) :
+      null;
+
+    this.setState({ filteredApps: filteredApps })
   }
 
   componentDidMount() {
@@ -19,10 +28,11 @@ class ApplicationsList extends React.Component {
   }
 
   render() {
+    const applications = this.state.filteredApps || this.state.applications;
     return (
       <div className="applications-list">
-        <ActionsMenu />
-        <ApplicationsTable items={this.state.applications} />
+        <ActionsMenu handleSearch={this.handleSearch} />
+        <ApplicationsTable items={applications} />
       </div>
     );
   }
