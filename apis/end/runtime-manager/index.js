@@ -21,9 +21,7 @@ app.get('/applications', function (req, res) {
       res.send(apps);
     })
     .catch(function (err) {
-      if (err) {
-        throw err;
-      }
+      throw err;
     });
 });
 
