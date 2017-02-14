@@ -1,6 +1,10 @@
 # MuleSoft Meetup 2017 - Workshop: Async techniques with JS
 
-TBC
+## Installation
+
+```JS
+node install.js
+```
 
 ## Exercise 1: Native Promises
 
