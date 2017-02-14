@@ -1,8 +1,38 @@
 ## Exercise 3: async/await
 
-1. TBC
+### Prerequisites
 
+Since async/await is still in revision, we need to perform some actions to set up our development environment:
 
+1. Install babel-node and the proper babel pluging by running `npm i -D babel-cli babel-plugin-transform-async-to-generator`.
+
+1. Update the **package.json** with the following code:
+
+  ```json
+  {
+    ...
+    "babel": {
+      "plugins": [
+        "transform-async-to-generator"
+      ]
+    }
+    ...
+  }
+  ```
+
+1. Update the start script with the following code:
+
+  ```json
+  {
+    ...
+    "scripts": {
+      "start": "babel-node ."
+    },
+    ...
+  }
+  ```
+
+### Steps
 
 1. Open the **apis/begin/worker-clouds/index.js** file. We are going to update the code to retrieve applications.
 
