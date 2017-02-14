@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Mule Worker Clouds API",
   "main": "index.js",
+  "scripts": {
+    "start": "babel-node ."
+  },
+  "babel": {
+    "plugins": [
+      "transform-async-to-generator"
+    ]
+  },
   "repository": {
     "url": "https://github.com/nanovazquez/ms-meetup-async-workshop",
     "type": "git"
@@ -12,5 +20,9 @@
   "dependencies": {
     "bluebird": "^3.4.7",
     "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-plugin-transform-async-to-generator": "^6.22.0"
   }
 }

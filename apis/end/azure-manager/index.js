@@ -11,16 +11,24 @@ app.use(function (req, res, next) {
 });
 
 app.get('/applications', function (req, res) {
-  return new Promise(function (resolve, reject) {
+  var promise = new Promise(function (resolve, reject) {
     fs.readFile('data.json', 'utf8', function (err, data) {
       if (err) {
-        return console.error(err);
+        reject(err);
       }
+      resolve(data);
+    });
+  });
+
+  return promise
+    .then(function (data) {
       var apps = JSON.parse(data);
       console.log('..applications requested, sending %s apps', apps.length);
       res.send(apps);
+    })
+    .catch(function (err) {
+      throw err;
     });
-  });
 });
 
 app.listen(port, function () {

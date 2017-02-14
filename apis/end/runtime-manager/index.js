@@ -3,6 +3,9 @@ var fs = require('fs');
 var app = express();
 var port = process.env.PORT || 8103;
 
+var Promise = require('bluebird');
+var readFile = Promise.promisify(fs.readFile);
+
 // Add headers
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -11,14 +14,17 @@ app.use(function (req, res, next) {
 });
 
 app.get('/applications', function (req, res) {
-  fs.readFile('data.json', 'utf8', function (err, data) {
-    if (err) {
-      return console.error(err);
-    }
-    var apps = JSON.parse(data);
-    console.log('..applications requested, sending %s apps', apps.length);
-    res.send(apps);
-  });
+  return readFile('data.json', 'utf8')
+    .then(function (data) {
+      var apps = JSON.parse(data);
+      console.log('..applications requested, sending %s apps', apps.length);
+      res.send(apps);
+    })
+    .catch(function (err) {
+      if (err) {
+        throw err;
+      }
+    });
 });
 
 app.listen(port, function () {

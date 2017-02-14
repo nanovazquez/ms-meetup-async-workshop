@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Mule Worker Clouds API",
   "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
   "repository": {
     "url": "https://github.com/nanovazquez/ms-meetup-async-workshop",
     "type": "git"
