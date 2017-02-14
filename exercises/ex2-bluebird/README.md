@@ -1,6 +1,8 @@
 ## Exercise 2: Bluebird
 
-1. Open the **apis/begin/runtime-manager/index.js** file. We are going to update the code to retrieve applications.
+> **Note**: you can see a working version of the app under the [/end/runtime-manager](./end/runtime-manager) folder.
+
+1. Open the **apis//runtime-manager/index.js** file. We are going to update the code to retrieve applications.
 
 1. First of all, paste the following code on top of the file to require the Bluebird library:
 
@@ -77,3 +79,5 @@
   ```
 
   You should see the list with all the apps loaded.
+
+> **Note**: you can see a working version of the app under the [/end/runtime-manager](./end/runtime-manager) folder.

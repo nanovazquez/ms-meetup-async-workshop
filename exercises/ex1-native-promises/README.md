@@ -1,6 +1,8 @@
 ## Exercise 1: Native promises
 
-1. Open the **apis/begin/azure-manager/index.js** file. We are going to update the code to retrieve applications.
+> **Note**: You can see a working version of the app under the [/end/azure-manager](./end/azure-manager) folder.
+
+1. Open the **apis//azure-manager/index.js** file. We are going to update the code to retrieve applications.
 
 1. Create a new Promise instance by updating the function inside the `app.get('/applications')` with the following code:
 
@@ -85,3 +87,5 @@
   ```
 
   You should see the list with all the apps loaded.
+
+> **Note**: You can see a working version of the app under the [/end/azure-manager](./end/azure-manager) folder.

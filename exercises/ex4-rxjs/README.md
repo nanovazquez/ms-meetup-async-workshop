@@ -1,5 +1,7 @@
 ## Exercise 4: RxJS
 
+> **Note**: You can see a working version of the code in the [end/index.js](./end/index.js) file.
+
 1. Open the **mulesoft-apps-ui/src/components/ApplicationList/index.js** file. We are going to update the code to retrieve applications.
 
 1. First of all, paste the following ES6 code on top of the file to require the RxJS library:
@@ -69,3 +71,5 @@
   ```
 
   You should see the list with all the apps loaded.
+
+> **Note**: You can see a working version of the code in the [end/index.js](./end/index.js) file.

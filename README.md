@@ -26,7 +26,7 @@ node install.js
 
 This workshop contains the following exercises:
 
-1. [Exercise 1: Native Promises](./exercises/ex1-native-promises.md)
-1. [Exercise 2: Bluebird](./exercises/ex2-bluebird.md)
-1. [Exercise 3: async/await](./exercises/ex3-async-await.md)
-1. [Exercise 4: RxJs](./exercises/ex4-rxjs.md)
+1. [Exercise 1: Native Promises](./exercises/ex1-native-promises/README.md)
+1. [Exercise 2: Bluebird](./exercises/ex2-bluebird/README.md)
+1. [Exercise 3: async/await](./exercises/ex3-async-await/README.md)
+1. [Exercise 4: RxJs](./exercises/ex4-rxjs/README.md)

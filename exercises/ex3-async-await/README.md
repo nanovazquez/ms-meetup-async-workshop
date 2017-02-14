@@ -1,5 +1,7 @@
 ## Exercise 3: async/await
 
+> **Note**: You can see a working version of the app under the [/end/worker-clouds](./end/worker-clouds) folder.
+
 ### Prerequisites
 
 Since async/await is still in revision, we need to perform some actions to set up our development environment:
@@ -34,7 +36,7 @@ Since async/await is still in revision, we need to perform some actions to set u
 
 ### Steps
 
-1. Open the **apis/begin/worker-clouds/index.js** file. We are going to update the code to retrieve applications.
+1. Open the **apis//worker-clouds/index.js** file. We are going to update the code to retrieve applications.
 
 1. As before, we are going to use bluebird to promisify the `fs.readFile` function. Paste the following code at tthe top of the file:
 
@@ -111,3 +113,4 @@ Since async/await is still in revision, we need to perform some actions to set u
 
   You should see the list with all the apps loaded.
 
+> **Note**: you can see a working version of the app under the [/end/worker-clouds](./end/worker-clouds) folder.
