@@ -13,7 +13,7 @@
   "author": "nanovazquez",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.1",
+    "express": "^4.22.0",
     "request": "^2.79.0"
   }
 }
